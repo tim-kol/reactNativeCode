@@ -1,0 +1,109 @@
+import React, { Component } from "react";
+import { StyleSheet, View, Text, Image } from "react-native";
+
+function Home(props) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.rect}>
+        <View style={styles.fullLogo}>
+          <View style={styles.logoRow}>
+            <View style={styles.logo}>
+              <View style={styles.rect2Stack}>
+                <View style={styles.rect2}></View>
+                <Text style={styles.n2}>n</Text>
+              </View>
+            </View>
+            <View style={styles.nairaboxStack}>
+              <Text style={styles.nairabox}>nairabox</Text>
+              <Text style={styles.doItQuicker}>DO IT QUICKER</Text>
+            </View>
+          </View>
+        </View>
+        <Image
+          source={require("../assets/images/loader.gif")}
+          resizeMode="contain"
+          style={styles.image}
+        ></Image>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  rect: {
+    width: 414,
+    height: 896,
+    backgroundColor: "rgba(2,13,24,1)"
+  },
+  fullLogo: {
+    width: 257,
+    height: 50,
+    flexDirection: "row",
+    marginTop: 293,
+    marginLeft: 78
+  },
+  logo: {
+    width: 46,
+    height: 50
+  },
+  rect2: {
+    top: 4,
+    left: 0,
+    width: 46,
+    height: 46,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    position: "absolute",
+    borderRadius: 10,
+    borderColor: "#000000",
+    borderWidth: 0
+  },
+  n2: {
+    top: 0,
+    left: 8,
+    color: "#121212",
+    position: "absolute",
+    fontSize: 48,
+    fontFamily: "montserrat-600"
+  },
+  rect2Stack: {
+    width: 46,
+    height: 50
+  },
+  nairabox: {
+    top: 0,
+    left: 0,
+    color: "rgba(255,255,255,1)",
+    position: "absolute",
+    fontSize: 48,
+    fontFamily: "montserrat-500"
+  },
+  doItQuicker: {
+    top: 50,
+    left: 110,
+    color: "rgba(255,255,255,1)",
+    position: "absolute",
+    fontSize: 12,
+    fontFamily: "montserrat-800"
+  },
+  nairaboxStack: {
+    width: 207,
+    height: 96,
+    marginLeft: 4
+  },
+  logoRow: {
+    height: 96,
+    flexDirection: "row",
+    flex: 1
+  },
+  image: {
+    width: 116,
+    height: 116,
+    marginTop: 245,
+    marginLeft: 149
+  }
+});
+
+export default Home;
